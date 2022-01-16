@@ -3,10 +3,10 @@ services:
   db:
     image: "mysql:latest"
   client:
-    build: .
+    build: ./wow-tracker-client
     ports:
       - "3000:3000"
   server:
-    build: .
+    build: ./wow-tracker-server
     ports:
       - "4000:4000"

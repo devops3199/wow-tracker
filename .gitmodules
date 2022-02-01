@@ -1,8 +1,8 @@
 [submodule "client"]
 	path = wow-tracker-client
 	url = git@github.com:devops3199/wow-tracker-client.git
-	branch = main
+	branch = master
 [submodule "server"]
 	path = wow-tracker-server
 	url = git@github.com:devops3199/wow-tracker-server.git
-	branch = main
+	branch = master

@@ -20,11 +20,11 @@ CREATE TABLE wow.auth (
 CREATE TABLE wow.play (
   `id` int NOT NULL AUTO_INCREMENT,
   `playerId` int NOT NULL,
-  `beginAt` datetime NOT NULL,
-  `endAt` datetime NOT NULL,
+  `beginTime` datetime NOT NULL,
+  `endTime` datetime NOT NULL,
   `dungeonCount` int NOT NULL,
   `raidCount` int NOT NULL,
-  `playAt` datetime NOT NULL,
+  `playTime` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_play_user_idx` (`playerId`),
   CONSTRAINT `fk_play_user` FOREIGN KEY (`playerId`) REFERENCES `user` (`id`)

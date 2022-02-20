@@ -2,30 +2,10 @@ CREATE DATABASE wow;
 
 CREATE TABLE wow.user (
   `id` int NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `createdAt` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE wow.auth (
-  `id` varchar(255) NOT NULL,
-  `userId` int NOT NULL,
-  `createdAt` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-CREATE TABLE wow.play (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `playerId` int NOT NULL,
-  `beginTime` datetime NOT NULL,
-  `endTime` datetime NOT NULL,
-  `dungeonCount` int NOT NULL,
-  `raidCount` int NOT NULL,
-  `playTime` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_play_user_idx` (`playerId`),
-  CONSTRAINT `fk_play_user` FOREIGN KEY (`playerId`) REFERENCES `user` (`id`)
+  `token` varchar(255) NOT NULL,
+  `battleTag` varchar(50) NOT NULL,
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`,`token`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `token_UNIQUE` (`token`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

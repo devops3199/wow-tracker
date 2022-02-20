@@ -1,7 +1,7 @@
 CREATE DATABASE wow;
 
 CREATE TABLE wow.user (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL,
   `token` varchar(255) NOT NULL,
   `battleTag` varchar(50) NOT NULL,
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,

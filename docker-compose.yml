@@ -1,7 +1,9 @@
 version: "3"
 services:
   db:
-    image: "mysql:latest"
+    image: "ops3199/wow-db:latest"
+    ports:
+      - "3306:3306"
   client:
     platform: linux/amd64
     build: ./wow-tracker-client

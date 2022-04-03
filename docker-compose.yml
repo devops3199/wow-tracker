@@ -9,8 +9,24 @@ services:
     build: ./wow-tracker-client
     ports:
       - "3000:3000"
+    restart: always
+    volumes:
+      - ./wow-tracker-client/src/:/wow-tracker-client/src/
   server:
     platform: linux/amd64
     build: ./wow-tracker-server
     ports:
       - "4000:4000"
+    environment:
+      - WOW_BNET_ID=ee1be9c423e5457789cf626b388cb49d
+      - WOW_BNET_SECRET=WlxMdBiVUypqUImE8DNujGTOXhHIA1e3
+      - WOW_DB_HOST=db
+      - WOW_DB_PORT=3306
+      - WOW_DB_USER=root
+      - WOW_DB_PASSWORD=1234
+      - WOW_DB_DATABASE=wow
+    restart: always
+    volumes:
+      - ./wow-tracker-server/src/:/wow-tracker-server/src/
+    depends_on:
+      - db

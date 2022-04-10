@@ -5,11 +5,13 @@
 - 자세한 개발 히스토리는 아래 링크 참고
 
 - Client
+
   - https://github.com/devops3199/wow-tracker-client
+
 - Server
 
   - https://github.com/devops3199/wow-tracker-server
 
 - 데모
 
-https://user-images.githubusercontent.com/8262598/162577659-f464709f-85ad-4ebf-9063-5b85b3f833d4.mov
+https://user-images.githubusercontent.com/8262598/162620460-8458b047-4728-44d4-8990-9d1a6916f143.mov

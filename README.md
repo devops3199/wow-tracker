@@ -11,7 +11,3 @@
 - Server
 
   - https://github.com/devops3199/wow-tracker-server
-
-- 데모
-
-https://user-images.githubusercontent.com/8262598/162620460-8458b047-4728-44d4-8990-9d1a6916f143.mov
